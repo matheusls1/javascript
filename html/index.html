@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina inicial</title>
+    <!--<script type = "text/javascript" src= "exs.js" defer></script>-->
+    <h2>exercícios js</h2>
+</head>
+<body>
+    <p><button onclick="RunEx1()">exercício 1</button></p>
+    <p><button onclick="RunEx2()">exercício 2</button></p>
+    <p><button onclick="RunEx3()">exercício 3</button></p>
+    <p><button onclick="RunEx4()">exercício 4</button></p>
+    <p><button onclick="RunEx5()">exercício 5</button></p>
+    <p><button onclick="RunEx6()">exercício 6</button></p>
+    <p><button onclick="RunEx7()">exercício 7</button></p>
+    <p><button onclick="RunEx8()">exercício 8</button></p>
+    <p><button onclick="RunEx9()">exercício 9</button></p>
+    <p><button onclick="RunEx10()">exercício 10</button></p>
+    <p><button onclick="RunEx11()">exercício 11</button></p>
+    <p><button onclick="RunEx12()">exercício 12</button></p>
+    <p><button onclick="RunEx13()">exercício 13</button></p>
+    <p><button onclick="RunEx14()">exercício 14</button></p>
+    <p><button onclick="RunEx15()">exercício 15</button></p>
+    <script>
+        function RunEx1(){
+            console.log("primeiro exercício: ")  + ex1()
+            function ex1(){
+                A = 10
+                B = 20
+                console.log("antes: A = " + A, "B = " + B);
+                C = A
+                A = B
+                B = C   
+                console.log("depois: A = " + A, "B = " + B);
+            }
+        }
+        function RunEx2(){
+            console.log("segundo exercício: ")  + ex2()
+            function ex2(){
+                num1 = prompt("informe um numero: ")
+                console.log(num1 - 1)
+            }
+        }
+        function RunEx3(){
+            console.log("terceiro exercício: ")  + ex3()
+            function ex3(){
+                base = prompt("informe a base:")
+                altura = prompt("informe a altura:")
+                console.log("área: " + base * altura)
+            }
+
+        }
+        function RunEx4(){
+            console.log("quarto exercício: ")  + ex4()
+            function ex4(){
+                anos = prompt("informe quantos anos:")
+                meses = prompt("informe quantos meses:")
+                dias = prompt("informe quantos dias:")
+                diasTotal = anos * 365 + meses * 30 + dias * 1   
+                console.log("dias de idade: " + diasTotal)
+            }
+        }
+        function RunEx5(){
+            console.log("quinto exercício: ")  + ex5()
+            function ex5(){
+                eleitores = prompt("informe a quantidade de eleitores do município: ")
+                validos = prompt("informe a quantidade de votos válios: ")
+                brancos = prompt("informe a quantidade de votos brancos: ")
+                nulos = prompt("informe a quantidade de votos nulos: ")
+
+                pValidos = (validos * 100) / eleitores
+                pBrancos = (brancos * 100) / eleitores
+                pNulos = (nulos * 100) / eleitores
+                console.log("eleitores: " + eleitores + "\npercentual eleitores: 100%" +
+                            "\nvotos válidos: " + validos + "\npercentual votos válidos: " + pValidos + "%" +
+                            "\nvotos brancos: " + brancos + "\npercentual votos brancos: " + pBrancos + "%" +
+                            "\nvotos nulos: " + nulos + "\npercentual votos nulos: " + pNulos + "%")
+            }
+        }
+        function RunEx6(){
+            console.log("sexto exercício: ") + ex6()
+            function ex6(){
+                salario = prompt("informe o salário mensal atual: ")
+                reajuste = prompt("informe a porcentagem do reajuste: ")
+                salario = salario * 1
+                reajuste = reajuste / 100
+                reajSal = salario * reajuste
+                novoSalario = reajSal + salario
+                console.log("novo salário: R$ " + novoSalario)
+            }
+        }
+        function RunEx7(){
+            console.log("sétimo exercício: ") + ex7()
+            function ex7(){
+                fabrica = prompt("informe o custo de fábrica: ")
+                custoFinal = fabrica * 1 + fabrica * 0.45 + fabrica * 0.28
+                console.log("custo ao cliente: " + custoFinal)
+            }
+        }
+        function RunEx8(){
+            console.log("oitavo exercício: ") + ex8()
+            function ex8(){
+                nota1 = prompt("digite a primeira nota: ")
+                nota2 = prompt("digite a segunda nota: ")
+                nota3 = prompt("digite a terceira nota: ")
+                notas = nota1 * 1 + nota2 * 1 + nota3 * 1
+                media = notas / 3
+                console.log("media: " + media)
+            }
+        }        
+        function RunEx9(){            
+            console.log("nono exercício: ") + ex9()
+            function ex9(){
+                numMacas = prompt("informe a quantidade de maçãs compradas: ")
+                preco = 1
+                if (numMacas < 12) {
+                    preco = 1.30;
+                }
+                console.log(preco)        
+                custoTotal = numMacas * preco
+                console.log("custo total: " + custoTotal)
+            }
+        }
+        function RunEx10(){            
+            console.log("décimo exercício: ") + ex10()
+            function ex10(){
+                salario = prompt("informe o salario fixo:")
+                vendas = prompt("informe o valor das vendas:")
+                if (vendas > 1500){
+                    comissao = 0.05
+                    vendasComis = vendas * 0.05
+                } else {
+                    comissao = 0.03
+                    vendasComis = vendas * 0.03
+                }
+                salarioTotal = salario * 1 + vendasComis
+                console.log("salario total: " + salarioTotal)
+            }
+        }
+        function RunEx11(){
+            console.log("décimo primeiro exercício: ") + ex11()
+            function ex11(){
+                conta = prompt("insira o número da conta: ")
+                saldo = prompt("insira o saldo: ")
+                debito = prompt("insira o débito: ")
+                credito = prompt("insira o crédito: ")
+                saldoAtual = saldo - (debito * 1 + credito * 1)
+                console.log("saldo atual: " + saldoAtual)
+                if (saldoAtual >= 0){
+                    console.log("saldo positivo")
+                } else {
+                    console.log("saldo negativo")
+                }
+            }
+        }
+        function RunEx12(){
+            console.log("décimo segundo exercício: ") + ex12()
+            function ex12(){
+                numero = prompt("inira um número inteiro entre 1 e 10:")// ou do/while
+                if (numero >= 1 && numero <= 10){
+                    for (numero >= 1; numero <= 10;) { //if (numero 10){ //(numero > 10 && numero < 1)                
+                        console.log(numero + " x 1 = " + numero * 1 +
+                            "\n" + numero + " x 2 = " + numero * 2 +
+                            "\n" + numero + " x 3 = " + numero * 3 +
+                            "\n" + numero + " x 4 = " + numero * 4 +
+                            "\n" + numero + " x 5 = " + numero * 5 +
+                            "\n" + numero + " x 6 = " + numero * 6 +
+                            "\n" + numero + " x 7 = " + numero * 7 +
+                            "\n" + numero + " x 8 = " + numero * 8 +
+                            "\n" + numero + " x 9 = " + numero * 9 +
+                            "\n" + numero + " x 10 = " + numero * 10)
+                    break;
+                    }
+                }else {
+                    console.log("digite um número entre 1 e 10")
+                }
+                                //console.log(tabuada())
+                                //function tabuada(){
+                                //    for(var num = 1; num <= 10 ; num++)
+                                //        console.log(numero + " x " + num + " = " + (numero * num));
+                                //}
+                 //else {//console.log("digite um número entre 1 e 10")}                              
+            }
+        }
+        function RunEx13(){
+            console.log("décimo terceiro exercício: ") + ex13()
+            function ex13(){
+                contador = prompt("informe um numero inteiro:")
+                while(contador >= 1){
+                    console.log(contador) 
+                    contador = contador -1
+                }
+            }
+        }         
+        function RunEx14(){
+
+console.log("décimo quarto exercício: ") + ex14()
+
+function ex14(){
+
+    num1 = prompt("informe o primeiro numero:")
+
+    num2 = prompt("informe o segundo numero:")
+
+    num3 = prompt("informe o terceiro numero:")
+
+    num4 = prompt("informe o quarto numero:")
+
+    num5 = prompt("informe o quinto numero:")
+
+    num6 = prompt("informe o sexto numero:")
+
+    num7 = prompt("informe o sétimo numero:")
+
+    num8 = prompt("informe o oitavo numero:")
+
+    num9 = prompt("informe o nono numero:")
+
+    num10 = prompt("informe o décimo numero:")
+
+
+
+    var numeros = [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10];
+
+    function buscarNegativos(valor){
+
+        if (valor < 0)
+
+        return valor;
+
+    }
+
+    var negativos = numeros.filter(buscarNegativos);
+
+    console.log(negativos.length + " números lidos são negativos");
+
+}
+
+}      
+function RunEx15(){
+
+console.log("décimo quinto exercício: ") + ex15()
+
+function ex15(){
+
+    num1 = prompt("informe o primeiro numero:")
+
+    num2 = prompt("informe o segundo numero:")
+
+    num3 = prompt("informe o terceiro numero:")
+
+    num4 = prompt("informe o quarto numero:")
+
+    num5 = prompt("informe o quinto numero:")
+
+    num6 = prompt("informe o sexto numero:")
+
+    num7 = prompt("informe o sétimo numero:")
+
+    num8 = prompt("informe o oitavo numero:")
+
+    num9 = prompt("informe o nono numero:")
+
+    num10 = prompt("informe o décimo numero:")
+
+
+
+    var numeros = [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10];
+
+    function buscarInferior40(valor){
+
+        if (valor < 40)
+
+        return valor;
+
+    }
+
+    var inferior40 = numeros.filter(buscarInferior40);
+
+
+
+    var somarNumeros = inferior40.reduce((somarNumeros, currentElement) => somarNumeros * 1 + currentElement * 1)
+
+    console.log(somarNumeros);
+
+}
+
+}
+    </script>  
+</body>
+</html>
